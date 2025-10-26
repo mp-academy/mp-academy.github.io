@@ -22,8 +22,10 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-4 text-2xl text-gray-800 font-bold"
         >
-          <img src="/logoFullV2.svg" className="h-16" alt="MP Academy logo" />
-          MP Academy
+          <img src="/iconDarkRed.svg" className="h-16" alt="MP Academy logo" />
+          <p>
+            MP Academy of English
+          </p>
         </Link>
 
         {/* Desktop links */}

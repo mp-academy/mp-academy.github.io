@@ -112,6 +112,32 @@ export default function Offer() {
               Umów Lekcję Z Native Speakerem
             </button>
           </h1>
+          <div className="flex md:flex-row flex-col gap-6 w-full bg-gray-100 p-6 shadow-md">
+            <div className="flex flex-col h-full justify-between">
+              <h1 className="text-brand font-bold text-lg">
+                Lekcje online z Panią Martą
+                <span className="font-medium text-black ml-1">
+                  ucz się angielskiego wygodnie z domu! Pani Marta prowadzi zajęcia online dla <span className="text-brand font-medium">dzieci od 3 klasy szkoły podstawowej</span> oraz <span className="text-brand font-medium">dla dorosłych.</span> Przyjazna atmosfera, praktyczna nauka i realne postępy - gdziekolwiek jesteś.
+                </span>
+              </h1>
+              <br />
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/school-maniapisania/",
+                    "_blank"
+                  )
+                }
+              >
+                Umów Lekcję z P. Martą
+              </button>
+            </div>
+
+            <img
+              src="/Asia MP.png"
+              className="w-full object-cover object-top rounded-lg overflow-hidden"
+            />
+          </div>
         </div>
       </div>
     </div>
