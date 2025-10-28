@@ -134,7 +134,7 @@ export default function Offer() {
             </div>
 
             <img
-              src="/Asia MP.png"
+              src="/Marta.jpeg"
               className="w-full object-cover object-top rounded-lg overflow-hidden"
             />
           </div>
