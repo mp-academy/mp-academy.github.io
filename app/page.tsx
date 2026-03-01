@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, animate } from "framer-motion";
+import Link from "next/link";
 
 const bulletColors = ["#a1232b", "#ffcc05", "#4278b1", "#4f9149", "#be342a"];
 
@@ -159,9 +160,9 @@ export default function Home() {
             </span>
           </h3>
           <div className="flex gap-2">
-            <button onClick={() => (document.location.href = "/offer")}>
-              Umów Lekcję
-            </button>
+            <Link href="/offer">
+              <button>Umów Lekcję</button>
+            </Link>
             <button
               onClick={() =>
                 document
@@ -245,9 +246,11 @@ export default function Home() {
           Gotowy spróbować nauki z{" "}
           <span className="font-bold text-brand">native speakerami?</span>
         </h1>
-        <button onClick={() => (document.location.href = "/offer")}>
-          Zobacz naszą <span className="font-bold">ofertę</span>
-        </button>
+        <Link href="/offer">
+          <button>
+            Zobacz naszą <span className="font-bold">ofertę</span>
+          </button>
+        </Link>
       </div>
       <div className="bg-gray-100 p-10 pb-5 text-center text-sm text-gray-600">
         <p className="mb-2">

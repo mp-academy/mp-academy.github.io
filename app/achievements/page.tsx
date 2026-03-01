@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Offer() {
   return (
     <div>
@@ -77,12 +79,9 @@ export default function Offer() {
               </li>
             </ul>
             <div className="mt-6">
-              <button
-                className="w-full"
-                onClick={() => (document.location.href = "/offer")}
-              >
-                Umów Lekcję
-              </button>
+              <Link href="/offer">
+                <button className="w-full">Umów Lekcję</button>
+              </Link>
             </div>
           </div>
         </div>
