@@ -96,7 +96,7 @@ export function BulletCarousel({
       onChange(newI);
     }, 3000);
     return () => clearInterval(iid);
-  }, [index, x]);
+  }, [index, x, onChange]);
 
   return (
     <div className="w-full">
@@ -184,7 +184,7 @@ export default function Home() {
         <h1 className="self-start text-2xl font-medium">
           Dlaczego{" "}
           <span
-            className="font-bold"
+            className="font-semibold"
             style={{ color: bulletColors[bulletColor] }}
           >
             MP Academy of English?
