@@ -86,7 +86,7 @@ export function BulletCarousel({
 
       animate(x, targetX, {
         type: "spring",
-        stiffness: 200,
+        stiffness: 60,
         damping: 30,
       });
     }
@@ -94,7 +94,7 @@ export function BulletCarousel({
       const newI = index === bulletItems.length - 1 ? 0 : index + 1;
       setIndex(newI);
       onChange(newI);
-    }, 3500);
+    }, 3000);
     return () => clearInterval(iid);
   }, [index, x]);
 
@@ -126,6 +126,7 @@ export function BulletCarousel({
 
 export default function Home() {
   const [bulletColor, setBulletColor] = useState(0);
+  // const [attributionOpen, setAttributionOpen] = useState(false);
   return (
     <div>
       <div
@@ -207,12 +208,12 @@ export default function Home() {
               key={e.title}
               className="flex flex-col items-center text-center bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow"
             >
-              <div className="w-24 h-24 flex items-center justify-center mb-4">
-                <img
+              <div className="w-24 flex items-center justify-center mb-4">
+                {/*<img
                   src={e.logo}
                   alt={e.title}
                   className="max-w-full max-h-full object-contain"
-                />
+                />*/}
               </div>
               <p className="text-base font-medium">{e.title}</p>
             </div>
@@ -252,24 +253,33 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      <div className="bg-gray-100 p-10 pb-5 text-center text-sm text-gray-600">
-        <p className="mb-2">
-          Zamieszczone logotypy są własnością odpowiednich instytucji:
-        </p>
-        {exams.map((e) => (
-          <p key={e.title}>
-            {e.title}:{" "}
-            <a
-              href={e.logo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline break-all"
-            >
-              {e.logo}
-            </a>
-          </p>
-        ))}
-      </div>
+      {/*<div className="bg-gray-100 p-5 text-center text-sm text-neutral-400 font-sans!">
+        <a
+          onClick={() => setAttributionOpen(!attributionOpen)}
+          className="font-medium hover:underline cursor-pointer"
+        >
+          Zamieszczone logotypy są własnością odpowiednich instytucji
+          <span className="ml-2">{attributionOpen ? "▲" : "▼"}</span>
+        </a>
+
+        {attributionOpen && (
+          <div className="space-y-2 break-all text-xs md:text-sm">
+            {exams.map((e) => (
+              <p key={e.title}>
+                {e.title}:{" "}
+                <a
+                  href={e.logo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {e.logo}
+                </a>
+              </p>
+            ))}
+          </div>
+        )}
+      </div>*/}
     </div>
   );
 }
