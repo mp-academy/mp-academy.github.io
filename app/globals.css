@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #ffcc05;
+  --color-brand-foreground: #ffffff;
+
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+
+  --font-sans: "Montserrat", sans-serif;
+}
+
+button {
+  background: var(--color-brand);
+  padding: 10px;
+  transition: all ease-in-out 0.1s;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-wrap: nowrap;
+}
+
+button:hover {
+  filter: brightness(95%);
+  cursor: pointer;
+}
